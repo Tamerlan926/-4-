@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Cостояние проекта - Копирование важных данных»</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #221f20;
+            color: white;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            background: #ffc107;
+            color: #221f20;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 20px solid #ffc107;
+        }
+        .header::after {
+            content: "";
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 20px solid #ffc107;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            margin: 5px 0 20px;
+            color: #ccc;
+        }
+        .matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2px;
+            background: #333;
+            border: 2px solid #444;
+            border-radius: 8px;
+        }
+        .cell {
+            padding: 15px;
+            text-align: center;
+            background: #2d2a2b;
+            border: 1px solid #444;
+            font-size: 14px;
+        }
+        .cell-header {
+            background: #221f20;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 12px;
+        }
+        .emoji {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .note {
+            font-size: 11px;
+            color: #aaa;
+            line-height: 1.3;
+            margin-top: 5px;
+        }
+        .your-case {
+            background: #4a3c3e !important;
+            border: 2px solid #ff6b6b;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 15px;
+            background: #2d2a2b;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .footer strong {
+            color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Как быстро понять состояние проекта</div>
+    <div class="subtitle">Для проекта: «Копирование важных данных» — срок 29 дней</div>
+
+    <div class="matrix">
+     
+        <div class="cell cell-header"></div>
+        <div class="cell cell-header">SV < 0<br>SPI < 1</div>
+        <div class="cell cell-header">SV > 0<br>SPI > 1</div>
+
+      
+        <div class="cell cell-header">CV > 0<br>CPI > 1</div>
+        <div class="cell">
+            <div class="emoji">😞</div>
+            Экономия времени<br>
+            Отставание по срокам
+            <div class="note">Вы делаете больше, чем тратите — но медленнее плана. Нужно ускориться.</div>
+        </div>
+        <div class="cell">
+            <div class="emoji">😊</div>
+            Экономия времени<br>
+            Опережение сроков
+            <div class="note">Идеально! Работаете эффективно и впереди графика. Продолжайте!</div>
+        </div>
+
+   
+        <div class="cell cell-header">CV < 0<br>CPI < 1</div>
+        <div class="cell">
+            <div class="emoji">😫</div>
+            Перерасход времени<br>
+            Отставание по срокам
+            <div class="note">Критика: тратите больше, чем осваиваете, и отстаёте. Требуется срочная коррекция.</div>
+        </div>
+        <div class="cell">
+            <div class="emoji">😐</div>
+            Перерасход времени<br>
+            Опережение сроков
+            <div class="note">Вы успеваете, но тратите слишком много времени на задачи. Нужно повысить эффективность.</div>
+        </div>
+
+       
+        <div class="cell cell-header">CV = 0<br>CPI = 1,0</div>
+        <div class="cell your-case">
+            <div class="emoji">😐</div>
+            Нейтральная эффективность<br>
+            Отставание по срокам
+            <div class="note">Вы работаете точно по эффективности — каждый день даёт один день работы. Но вы отстаёте от графика. Нужно ускориться, чтобы догнать план.</div>
+        </div>
+        <div class="cell"></div>
+    </div>
+
+    <div class="footer">
+        <strong>✅ Ваша ситуация (на 7-й день):</strong><br>
+        • CV = 0 → Нейтрально (не перерасход, не экономия)<br>
+        • CPI = 1,0 → Идеальная эффективность<br>
+        • SV = -4 → Отставание на 4 дня<br>
+        • SPI = 0,64 → Темп ниже плана<br>
+        <br>
+        <strong>📌 Ячейка:</strong> Нейтральная эффективность + Отставание по срокам<br>
+        <strong>🎯 Действие:</strong> Увеличу темп для сохранения качества
+    </div>
+
+</body>
+</html>
